@@ -1,0 +1,28 @@
+<div *ngIf="book">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"> Title</th>
+        <th scope="col"> ISBN</th>
+        <th scope="col"> DateOfPublication</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">{{ book.BookId}}</th>
+        <td>{{ book.Title }}</td>
+        <td>{{ book.ISBN }}</td>
+        <td>{{ book.DateOfPublication | date:'yyyy-MM-dd' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="width:25%">
+    <div class="form-group">
+      <input [(ngModel)]="mid" class="form-control"  placeholder="Member ID" required>
+    </div>
+    <button type="submit" (click)="signout()" class="btn btn-primary">Signout</button>
+  </div>
+</div>

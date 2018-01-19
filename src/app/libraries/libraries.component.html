@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"> City</th>
+      <th scope="col"> Name</th>
+      <th scope="col"> Books</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let library of dataSource">
+      <th scope="row">{{ library.LibraryId }}</th>
+      <td>{{ library.City }}</td>
+      <td>{{ library.Name }}</td>
+      <td><a routerLink="/books/{{library.LibraryId}}" routerLinkActive="active">books</a></td>
+    </tr>
+  </tbody>
+</table>
